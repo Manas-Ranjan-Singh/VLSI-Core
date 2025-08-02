@@ -1,3 +1,10 @@
+//module definations with 14inputs
+//output=o_
+//input=i_
+//wire=w_
+//reg=r_
+//parameter=PARAMETER
+//-----------------------------------------------
 //half adder
     module half_adder(
 	                    o_s,
