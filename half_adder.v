@@ -1,9 +1,9 @@
 //half adder
     module half_adder(
 	                    o_s,
-					            o_c,
-					            i_a,
-					            i_b);
+	                    o_c,
+	                    i_a,
+		            i_b);
 	output            o_s;
 	output            o_c;
 	
@@ -19,21 +19,21 @@ endmodule
 //----------Testbench--------------
 
   module half_adder_tb();
-  wire       o_s;
+        wire       o_s;
 	wire       o_c;
 	reg        i_a;
 	reg        i_b;
 	
 	half_adder dut(
-	               .o_s(o_s),
-				         .o_c(o_c),
-				         .i_a(i_a),
-				         .i_b(i_b));
+	                .o_s(o_s),
+		        .o_c(o_c),
+			.i_a(i_a),
+		        .i_b(i_b));
 	
  initial $monitor ($time,"/t %b /t %b /t %b /t %b",o_s,o_c,i_a,i_b);	 
 	
 	initial begin //input signal
-	  i_a = 1'b0;   i_b = 1'b0;  #10;
+	        i_a = 1'b0;   i_b = 1'b0;  #10;
 		i_a = 1'b0;   i_b = 1'b1;  #10;
 		i_a = 1'b1;   i_b = 1'b0;  #10;
 		i_a = 1'b1;   i_b = 1'b1;  #10;
