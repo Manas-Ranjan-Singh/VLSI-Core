@@ -1,0 +1,197 @@
+//module definations with 14inputs
+//output=o_
+//input=i_
+//wire=w_
+//reg=r_
+//parameter=PARAMETER
+//-----------------------------------------------
+//NOT_Gate_7402
+//
+module vptl_not_14ip(
+                     o_z,
+                     o_y,
+					           o_x,
+				          	 o_w,
+				          	 o_v,
+			          		 o_u,
+				          	 i_a,
+			          		 i_b,
+					           i_c,
+					           i_d,
+				          	 i_e,
+				          	 i_f);
+output o_z; //Extended port_no2
+output o_y; //Extended port_no4
+output o_x; //Extended port_no6
+output o_w; //Extended port_no8
+output o_v; //Extended port_no10
+output o_u; //Extended port_no12
+input i_b; //Extended port_no1
+input i_a; //Extended port_no3
+input i_c; //Extended port_no5
+input i_d; //Extended port_no9 
+input i_e; //Extended port_no11
+input i_f; //Extended port_no13
+//-------------------------------------
+assign o_z=~i_a; //Extended port_no2
+assign o_y=~i_b; //Extended port_no4
+assign o_x=~i_c; //Extended port_no6
+assign o_w=~i_d; //Extended port_no8
+assign o_v=~i_e; //Extended port_no10
+assign o_u=~i_f; //Extended port_no12
+endmodule;
+
+//--------------------------------------
+//AND_Gate_7408
+
+module vptl_not_14ip(
+                     o_z,
+                     o_y,
+					           o_x,
+					           o_w,
+				          	 i_a,
+					           i_b,
+					           i_c,
+					           i_d,
+					           i_e,
+					           i_f,
+					           i_g,
+					           i_h);
+output o_z; //Extended port_no3
+output o_y; //Extended port_no6
+output o_x; //Extended port_no8
+output o_w; //Extended port_no11
+input i_a; //Extended port_no1
+input i_b; //Extended port_no2
+input i_c; //Extended port_no4
+input i_d; //Extended port_no5 
+input i_e; //Extended port_no9
+input i_f; //Extended port_no10
+input o_g; //Extended port_no12
+input o_h; //Extended port_no13
+
+// Logic Assign-----------------
+
+assign o_z=i_a & i_b; //Extended port_no3
+assign o_y=i_c & i_d; //Extended port_no6
+assign o_x=i_e & i_f; //Extended port_no8
+assign o_w=i_g & i_h; //Extended port_no11
+endmodule;					 
+
+//------------------------------------------
+//NAND_GATE_7400
+
+module vptl_not_14ip(
+                     o_z,
+                     o_y,
+					           o_x,
+					           o_w,
+				          	 i_a,
+				           	 i_b,
+		           			 i_c,
+			          		 i_d,
+			          		 i_e,
+			          		 i_f,
+			          		 i_g,
+				          	 i_h);
+output o_z; //Extended port_no3
+output o_y; //Extended port_no6
+output o_x; //Extended port_no8
+output o_w; //Extended port_no11
+input i_a; //Extended port_no1
+input i_b; //Extended port_no2
+input i_c; //Extended port_no4
+input i_d; //Extended port_no5 
+input i_e; //Extended port_no9
+input i_f; //Extended port_no10
+input o_g; //Extended port_no12
+input o_h; //Extended port_no13
+
+//Logic Assign------------------------------
+
+assign o_z=~(i_a & i_b); //Extended port_no3
+assign o_y=~(i_c & i_d); //Extended port_no6
+assign o_x=~(i_e & i_f); //Extended port_no8
+assign o_w=~(i_g & i_h); //Extended port_no11
+endmodule;	
+
+//------------------------------------------
+//OR_GATE_7432
+
+module vptl_not_14ip(
+                     o_z,
+                     o_y,
+					           o_x,
+				          	 o_w,
+				           	 i_a,
+				          	 i_b,
+		          			 i_c,
+		          			 i_d,
+		          			 i_e,
+		           			 i_f,
+		          			 i_g,
+		          			 i_h);
+output o_z; //Extended port_no3
+output o_y; //Extended port_no6
+output o_x; //Extended port_no8
+output o_w; //Extended port_no11
+input i_a; //Extended port_no1
+input i_b; //Extended port_no2
+input i_c; //Extended port_no4
+input i_d; //Extended port_no5 
+input i_e; //Extended port_no9
+input i_f; //Extended port_no10
+input o_g; //Extended port_no12
+input o_h; //Extended port_no13
+
+//Logic Assign------------------------------
+
+assign o_z=(i_a | i_b); //Extended port_no3
+assign o_y=(i_c | i_d); //Extended port_no6
+assign o_x=(i_e | i_f); //Extended port_no8
+assign o_w=(i_g | i_h); //Extended port_no11
+endmodule;	
+
+//------------------------------------------
+//XOR_GATE_7486
+
+module vptl_not_14ip(
+                     o_z,
+                     o_y,
+					           o_x,
+					           o_w,
+				           	 i_a,
+					           i_b,
+					           i_c,
+				          	 i_d,
+		          			 i_e,
+		          			 i_f,
+					           i_g,
+					           i_h);
+output o_z; //Extended port_no3
+output o_y; //Extended port_no6
+output o_x; //Extended port_no8
+output o_w; //Extended port_no11
+input i_a; //Extended port_no1
+input i_b; //Extended port_no2
+input i_c; //Extended port_no4
+input i_d; //Extended port_no5 
+input i_e; //Extended port_no9
+input i_f; //Extended port_no10
+input o_g; //Extended port_no12
+input o_h; //Extended port_no13
+
+//Logic Assign------------------------------
+
+assign o_z=~(i_a ^ i_b); //Extended port_no3
+assign o_y=~(i_c ^ i_d); //Extended port_no6
+assign o_x=~(i_e ^ i_f); //Extended port_no8
+assign o_w=~(i_g ^ i_h); //Extended port_no11
+endmodule;	
+
+
+
+
+
+
+
