@@ -10,16 +10,16 @@
 module vptl_not_14ip(
                      o_z,
                      o_y,
-					           o_x,
-					           o_w,
-					           o_v,
-					           o_u,
-				        	   i_a,
-					           i_b,
-					           i_c,
-				           	 i_d,
-					           i_e,
-				          	 i_f);
+		     o_x,
+	             o_w,
+	             o_v,
+	             o_u,
+		     i_a,
+	             i_b,
+		     i_c,
+	             i_d,
+	             i_e,
+                     i_f);
 output o_z; //Extended port_no2
 output o_y; //Extended port_no4
 output o_x; //Extended port_no6
@@ -47,16 +47,16 @@ endmodule;
 module vptl_not_14ip (
                       o_z,
                       o_y,
-			          		  o_x,
-					            o_w,
-					            i_a,
-				          	  i_b,
-					            i_c,
-					            i_d,
-					            i_e,
-					            i_f,
-					            i_g,
-				           	  i_h);
+	              o_x,
+		      o_w,
+	    	      i_a,
+		      i_b,
+		      i_c,
+	              i_d,
+		      i_e,
+		      i_f,
+		      i_g,
+		      i_h);
 output o_z; //Extended port_no3
 output o_y; //Extended port_no6
 output o_x; //Extended port_no8
@@ -84,16 +84,16 @@ endmodule;
 module vptl_not_14ip(
                      o_z,
                      o_y,
-					           o_x,
-				          	 o_w,
-					           i_a,
-					           i_b,
-				             i_c,
-					           i_d,
-					           i_e,
-				          	 i_f,
-				          	 i_g,
-				          	 i_h);
+		     o_x,
+		     o_w,
+		     i_a,
+		     i_b,
+		     i_c,
+		     i_d,
+		     i_e,
+		     i_f,
+		     i_g,
+		     i_h);
 output o_z; //Extended port_no3
 output o_y; //Extended port_no6
 output o_x; //Extended port_no8
@@ -121,16 +121,16 @@ endmodule;
 module vptl_not_14ip(
                      o_z,
                      o_y,
-				          	 o_x,
-					           o_w,
-					           i_a,
-					           i_b,
-					           i_c,
-					           i_d,
-					           i_e,
-				           	 i_f,
-				          	 i_g,
-					           i_h);
+		     o_x,
+		     o_w,
+		     i_a,
+		     i_b,
+		     i_c,
+	             i_d,
+		     i_e,
+		     i_f,
+		     i_g,
+		     i_h);
 output o_z; //Extended port_no3
 output o_y; //Extended port_no6
 output o_x; //Extended port_no8
@@ -158,16 +158,16 @@ endmodule;
 module vptl_not_14ip(
                      o_z,
                      o_y,
-					           o_x,
-					           o_w,
-					           i_a,
-					           i_b,
-					           i_c,
-			          		 i_d,
-				          	 i_e,
-				          	 i_f,
-			          		 i_g,
-			          		 i_h);
+		     o_x,
+		     o_w,
+		     i_a,
+		     i_b,
+		     i_c,
+		     i_d,
+		     i_e,
+	             i_f,
+		     i_g,
+	             i_h);
 output o_z; //Extended port_no3
 output o_y; //Extended port_no6
 output o_x; //Extended port_no8
@@ -188,10 +188,3 @@ assign o_y=~(i_c ^ i_d); //Extended port_no6
 assign o_x=~(i_e ^ i_f); //Extended port_no8
 assign o_w=~(i_g ^ i_h); //Extended port_no11
 endmodule;	
-
-
-
-
-
-
-
