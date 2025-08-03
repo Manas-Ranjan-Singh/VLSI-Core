@@ -1,4 +1,5 @@
-	//Full adder
+`timescale 1ns / 1ps
+//Full adder
 	module full_add(
                       o_s,
 					  o_c,
@@ -18,7 +19,6 @@
 
 	//full adder test bench
 
-	`timescale 1ns / 1ps
     module full_add_tb();
     wire       o_s;
 	wire       o_c;
