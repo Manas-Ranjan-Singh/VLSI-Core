@@ -1,0 +1,45 @@
+	//Full adder
+	module full_add(
+                      o_s,
+					  o_c,
+					  i_a,
+					  i_b,
+					  i_c);
+	output            o_s;
+	output            o_c;
+	
+	input             i_a;
+	input             i_b;
+    input             i_c;
+    
+    assign {o_c,o_s} = (i_a + i_b + i_c);
+    
+    endmodule
+
+	//full adder test bench
+
+	`timescale 1ns / 1ps
+    module full_add_tb();
+    wire       o_s;
+	wire       o_c;
+	reg        i_a;
+	reg        i_b;
+	reg        i_c;
+	
+	full_add dut(
+	             .o_s(o_s),
+			     .o_c(o_c),
+				 .i_a(i_a),
+				 .i_b(i_b),
+				 .i_c(i_c));
+	
+    initial $monitor ($time,"/t %b /t %b /t %b /t %b /t %b",o_s,o_c,i_a,i_b,i_c);	 
+	
+	initial begin //input signal
+	    i_a = 1'b0;   i_b = 1'b0;  i_c=1'b0; #10;
+		i_a = 1'b0;   i_b = 1'b1;  i_c=1'b0; #10;
+		i_a = 1'b1;   i_b = 1'b0;  i_c=1'b0; #10;
+		i_a = 1'b1;   i_b = 1'b1;  i_c=1'b0; #10;
+	end
+endmodule
+    endmodule
