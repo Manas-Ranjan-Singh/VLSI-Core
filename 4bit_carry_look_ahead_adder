@@ -1,7 +1,7 @@
 //-------4bit_carry_lookhead_adder---------
 //------------------ Half Adder ------------------
     module half_adder(
-	                   g,
+	                 g,
 					   p,
 					   a,
 					   b);
