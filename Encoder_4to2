@@ -1,0 +1,74 @@
+module encoder_4_to_2 (
+    input      [3:0] i_data,   
+    output reg [1:0] o_y,      
+    output reg       o_valid );
+
+    always @(*) begin
+        o_y = 2'bxx; 
+        o_valid = 1'b0;
+
+        if (i_data[3]) begin
+            o_y = 2'b11;
+            o_valid = 1'b1;
+        end
+
+        else if (i_data[2]) begin
+            o_y = 2'b10;
+            o_valid = 1'b1;
+        end
+
+        else if (i_data[1]) begin
+            o_y = 2'b01;
+            o_valid = 1'b1;
+        end
+
+        else if (i_data[0]) begin
+            o_y = 2'b00;
+            o_valid = 1'b1;
+        end
+    end
+endmodule
+
+
+//------------------------------------------------------------------
+// Testbench for the 4-to-2 Priority Encoder
+// r_ for registers (stimulus)
+// w_ for wires (observed)
+//------------------------------------------------------------------
+
+module encoder_4_to_2_tb;
+
+    reg  [3:0] r_i_data;  
+    wire [1:0] w_o_y;      
+    wire       w_o_valid;  
+
+    encoder_4_to_2 UUT (
+        .i_data(r_i_data),
+        .o_y(w_o_y),
+        .o_valid(w_o_valid)
+    );
+
+    initial begin
+
+        $monitor("%4d | %4b  |   %1b   |   %2b", $time, r_i_data, w_o_valid, w_o_y);
+
+        r_i_data = 4'b0000;
+        #10;
+        r_i_data = 4'b0001;
+        #10;
+        r_i_data = 4'b0100;
+        #10;
+        r_i_data = 4'b1000;
+        #10;
+
+        $display("\nTesting priority (1010)...\n");
+        r_i_data = 4'b1010;
+        #10;
+        
+        $display("\nTesting priority (0101)...\n");
+        r_i_data = 4'b0101;
+        #10;
+
+        $finish; 
+    end
+endmodule
